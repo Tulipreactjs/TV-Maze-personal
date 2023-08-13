@@ -4,11 +4,11 @@ import SearchBar from "./SearchBar";
 import { Link } from "react-router-dom";
 import { FiSearch } from "react-icons/fi";
 import Button from "react-bootstrap/Button";
-import Navbar from "react-bootstrap/Navbar";
 import Container from "react-bootstrap/Container";
 
 function MyNavbar() {
   const [searchBar, setSearchBar] = useState(false);
+  
 
   return (
     <>
@@ -18,12 +18,14 @@ function MyNavbar() {
             className="d-flex gap-3 align-items-center"
             style={{ width: "50%" }}
           >
-            <Link className="fw-bold text-white fs" href="#home" to="/">
+            <Link className="fw-bold text-white fs fade-right-animation delay-1" href="#home" to="/">
               TVMAZE
             </Link>
-            <Link to="/Tvshows" className="font-col">Tv shows</Link>
+            <Link to="/Tvshows" className="font-col fade-right-animation delay-2">Tv shows</Link>
+            <Link to="/Tvshows" className="font-col fade-right-animation delay-3">Trending</Link>
+            <Link to="/Tvshows" className="font-col fade-right-animation delay-4">Kids</Link>
           </div>
-          <div className="d-flex gap-5 align-items-center">
+          <div className="d-flex gap-5 align-items-center fade-right-animation delay-5">
             <SearchBar searchBar={searchBar} />
             <Button
               onClick={() => setSearchBar(!searchBar)}
