@@ -1,0 +1,291 @@
+*,
+Link {
+  text-decoration: none !important;
+}
+
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding-bottom: 0;
+}
+
+.loader-background {
+  height: 100vh;
+  background: rgb(191, 195, 201);
+  background: radial-gradient(
+    circle,
+    rgba(191, 195, 201, 1) 0%,
+    rgba(238, 238, 239, 1) 82%
+  );
+}
+
+.first-section {
+  height: 100vh;
+  background: rgb(18, 0, 41);
+  background: radial-gradient(
+    circle,
+    rgba(18, 0, 41, 1) 0%,
+    rgba(9, 0, 20, 1) 100%
+  );
+  color: rgba(9, 0, 20, 1) 100%;
+}
+
+.home-section2 {
+  padding-bottom: 50px;
+  margin: 0;
+  background: rgb(18, 0, 41);
+  background: radial-gradient(
+    circle,
+    rgba(18, 0, 41, 1) 0%,
+    rgba(9, 0, 20, 1) 100%
+  );
+}
+
+.navbar-style {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 5rem;
+  padding: 15px 15px;
+  background: rgb(106, 0, 245);
+  background: radial-gradient(
+    circle,
+    rgba(106, 0, 245, 1) 0%,
+    rgba(35, 0, 82, 1) 100%
+  );
+  position: fixed;
+  z-index: 1000;
+
+  /* box-shadow: 4px 4px 5px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 4px 4px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 4px 4px 5px 0px rgba(0, 0, 0, 0.75); */
+}
+
+.fs {
+  font-size: 1.5rem;
+}
+
+.font-col {
+  color: #e5dddd;
+}
+
+.font-col:hover {
+  opacity: 0.6 !important;
+}
+
+.fi-search {
+  animation: myAnim 2s ease 0s infinite normal forwards;
+  opacity: 1;
+  transition: opacity 1s ease 0s;
+}
+
+@keyframes fade-right {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.fade-right-animation {
+  animation: fade-right 0.5s ease-out forwards;
+  opacity: 0;
+}
+
+.delay-1 {
+  animation-delay: 0.2s;
+}
+
+.delay-2 {
+  animation-delay: 0.4s;
+}
+.delay-3 {
+  animation-delay: 0.6s;
+}
+
+.delay-4 {
+  animation-delay: 0.8s;
+}
+.delay-5 {
+  animation-delay: 1s;
+}
+
+@keyframes myAnim {
+  0% {
+    animation-timing-function: ease-out;
+    transform: scale(1);
+    transform-origin: center center;
+  }
+
+  10% {
+    animation-timing-function: ease-in;
+    transform: scale(0.91);
+  }
+
+  17% {
+    animation-timing-function: ease-out;
+    transform: scale(0.98);
+  }
+
+  33% {
+    animation-timing-function: ease-in;
+    transform: scale(0.87);
+  }
+
+  45% {
+    animation-timing-function: ease-out;
+    transform: scale(1);
+  }
+}
+
+.fi-search:hover {
+  opacity: 0.6;
+}
+
+.search-input {
+  border: none;
+  padding: 7px;
+  width: 300px;
+  border-radius: 4px;
+  color: #3a3636;
+  background-color: #f4f4f4;
+  transition: 5s;
+}
+
+.search-input:focus {
+  outline: none;
+}
+
+.search-input::placeholder {
+  color: #999;
+  font-style: italic;
+  padding: 10px;
+}
+
+.test-aos {
+  background-color: #4f3e3e;
+  height: 300px;
+  width: 5rem;
+}
+
+.home-div {
+  padding-top: 5rem;
+}
+
+.trending-heading {
+  font-size: 5rem;
+  font-weight: bold;
+  margin-bottom: 3rem;
+  color: #ffffff;
+}
+
+.movie-name {
+  background: rgb(82, 22, 179);
+  background: radial-gradient(
+    circle,
+    rgba(82, 22, 179, 0.6056547619047619) 0%,
+    rgba(9, 0, 20, 1) 100%
+  );
+}
+
+.full-height,
+.carousel-inner {
+  height: 100% !important;
+}
+
+.movie-image {
+  width: 100%;
+  height: 100%;
+  max-width: 300px;
+  border: 2px solid #100b0b;
+  border-radius: 8px;
+  overflow: hidden;
+
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+}
+
+.movie-image:hover {
+  transform: scale(1.05);
+}
+
+/* HERO SECTION IMAGE CONTAINER */
+.image-container {
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.mycard {
+  height: 400px !important;
+  width: 17rem;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin: 0 !important;
+  padding: 0 !important;
+  padding-bottom: 50px;
+  border-radius: 5px;
+}
+
+.movie-card {
+  transition: transform 0.2s ease-in-out;
+  background-color: #100b0b;
+  border-radius: 5px;
+}
+
+.movie-card-text {
+  font-size: 1rem;
+  padding-bottom: 0;
+  margin: 0;
+}
+
+.movie-card:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+.text-body {
+  border-radius: 5px;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+}
+
+.text-body-inner {
+  color: #e0dada;
+  padding: 1rem;
+  height: 30%;
+  width: 100%;
+  background: rgba(18, 0, 41, 0.199);
+  background: radial-gradient(
+    circle,
+    rgba(18, 0, 41, 0.297) 0%,
+    rgba(9, 0, 20, 0.879) 100%
+  );
+}
+
+.card img {
+  height: 100% !important;
+}
+
+.Tvshows {
+  padding-top: 10rem;
+}
+
+@keyframes bg {
+  0% {
+    background-position: center top;
+    background-size: 100%;
+  }
+
+  100% {
+    background-position: center top;
+    background-size: 150%;
+  }
+}
