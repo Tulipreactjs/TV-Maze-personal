@@ -1,6 +1,7 @@
 import { useState } from "react";
 
 import "aos/dist/aos.css";
+import { useLocation } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { Container } from "react-bootstrap";
 import Carousel from "react-bootstrap/Carousel";
@@ -8,7 +9,8 @@ import Tvshowscomponent from "../components/Tvshowscomponent";
 
 export default function Home({ data }) {
   const [current, setCurrent] = useState(0);
-
+  const location = useLocation();
+  console.log(location);
   const filterRating = data.filter((show) => show.rating.average >= 8.9);
   return (
     <>
@@ -17,18 +19,13 @@ export default function Home({ data }) {
           <h2 className="trending-heading">Trending Now</h2>
           <Carousel
             activeIndex={current}
-            onSelect={(item) => setCurrent(item)}
             controls={false}
             indicators={false}
+            onSelect={(index) => setCurrent(index)}
           >
-            {filterRating.slice(0, 3).map((show) => (
+            {filterRating.slice(0, 3).map((show, index) => (
               <Carousel.Item key={show.id}>
-                <div
-                  className={
-                    "bgColorA text-white p-1" +
-                    (show.id === filterRating[current].id ? " active" : "")
-                  }
-                >
+                <div className={"bgColorA text-white p-1"}>
                   <h1 className="fs-5">{show.name}</h1>
                 </div>
                 <hr />
@@ -58,7 +55,7 @@ export default function Home({ data }) {
           <Carousel
             className="full-height"
             activeIndex={current}
-            onSelect={(index) => setCurrent(index)}
+            // onSelect={(index) => setCurrent(index)}
             controls={false}
             fade
             indicators={false}
